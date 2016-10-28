@@ -1,7 +1,7 @@
 
 var photos={
             page: 1,
-            offset: 20,
+            offset: 100,
             init: function () {
                 var that = this;
                 $.getJSON("/photos/data.json", function (data) {
