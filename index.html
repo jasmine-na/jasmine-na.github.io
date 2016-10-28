@@ -281,7 +281,7 @@
 
   
     
-<article id="post-mac下git需忽略的文件处理办法（mac）" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-npm执行命令后无任何响应（windows下）" class="article article-type-post" itemscope itemprop="blogPost">
 
    
     
@@ -295,7 +295,7 @@
            
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/mac下git需忽略的文件处理办法（mac）/">如何在Mac OS X中开启或关闭显示隐藏文件命令</a>
+      <a class="article-title" href="/2016/10/27/npm执行命令后无任何响应（windows下）/">npm执行命令后无任何响应（windows下）</a>
     </h1>
   
 
@@ -306,10 +306,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://img.blog.csdn.net/20161027012623070" alt="jojo&#39;s blog"></p>
-<p>在.git同级目录下新建.gitignore文件，将要忽略的文件写进去即可。</p>
-<p>忽略前后：</p>
-<p><img src="http://img.blog.csdn.net/20161027013007980" alt="jojo&#39;s blog"></p>
+        <p>曾经执行过npm config set prefix 命令，<br>导致npm的config乱掉了，<br>找到这个文件.npmrc，<br>然后删掉就可以了 。<br>我的.npmrc位置在C:\Users\Administrator下。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-hexo d后 ERROR Deployer not found- git" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/hexo d后 ERROR Deployer not found- git/">hexo d后 ERROR Deployer not found git</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>$ hexo d<br>ERROR Deployer not found: git</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save </p>
+</blockquote>
+<p>即可。</p>
 
       
       
@@ -428,52 +471,6 @@
 
   
     
-<article id="post-hexo d后 ERROR Deployer not found- git" class="article article-type-post" itemscope itemprop="blogPost">
-
-   
-    
-  
-  <div class="article-inner block-select">
-  
-    
-    
-      <header class="article-header">
-        
-           
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/hexo d后 ERROR Deployer not found- git/">hexo d后 ERROR Deployer not found git</a>
-    </h1>
-  
-
-        
-      </header>
-      
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>$ hexo d<br>ERROR Deployer not found: git</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save </p>
-</blockquote>
-<p>即可。</p>
-
-      
-      
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    
 <article id="post-Express 应用生成器express-generator" class="article article-type-post" itemscope itemprop="blogPost">
 
    
@@ -533,7 +530,7 @@
 
   
     
-<article id="post-npm执行命令后无任何响应（windows下）" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-MongoDB安装、启动与关闭" class="article article-type-post" itemscope itemprop="blogPost">
 
    
     
@@ -547,7 +544,7 @@
            
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/npm执行命令后无任何响应（windows下）/">npm执行命令后无任何响应（windows下）</a>
+      <a class="article-title" href="/2016/10/27/MongoDB安装、启动与关闭/">如何在Mac OS X中开启或关闭显示隐藏文件命令</a>
     </h1>
   
 
@@ -558,7 +555,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>曾经执行过npm config set prefix 命令，<br>导致npm的config乱掉了，<br>找到这个文件.npmrc，<br>然后删掉就可以了 。<br>我的.npmrc位置在C:\Users\Administrator下。</p>
+        <p>安装包下载地址：<a href="http://pan.baidu.com/s/1eRGWWXs" target="_blank" rel="external">mongodb-win32-x86_64-2.6.6</a></p>
+<p>1.解压到当前文件夹，进到目录mongodb-win32-x86_64-2.6.6，在这里新建data文件夹，<br><img src="http://img.blog.csdn.net/20161019140103561" alt="jojo&#39;s blog"></p>
+<p>2.进到data目录下，在这里新建db文件夹，</p>
+<p><img src="http://img.blog.csdn.net/20161019140134843" alt="jojo&#39;s blog"></p>
+<p>3.命令行进到bin目录下，输入</p>
+<blockquote>
+<p>mongod –dbpath ../data/db</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161019140147143" alt="jojo&#39;s blog"></p>
+<p>回车后数据库成功启动，端口号27017<br><img src="http://img.blog.csdn.net/20161019140158378" alt="jojo&#39;s blog"></p>
+<p>4.新打开命令行命令行进到bin目录下，输入</p>
+<blockquote>
+<p>mongo</p>
+</blockquote>
+<p>按回车键</p>
+<p><img src="http://img.blog.csdn.net/20161019140213360" alt="jojo&#39;s blog"></p>
+<p>5.进到命令行窗口，这里你可以操作数据库了，来<br>(1) 创建数据库</p>
+<blockquote>
+<p>use myMongoDB</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161019140227784" alt="jojo&#39;s blog"></p>
+<p>(2)查看所有数据库</p>
+<blockquote>
+<p>show dbs</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161019140330675" alt="jojo&#39;s blog"></p>
+<p>参考地址 <a href="http://www.runoob.com/mongodb/mongodb-create-database.html" target="_blank" rel="external">http://www.runoob.com/mongodb/mongodb-create-database.html</a></p>
+<p>6.关闭数据库，很重要，不正常关闭下次启动有可能会异常</p>
+<blockquote>
+<p>use admin<br>db.shutdownServer()</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161019135738938" alt="jojo&#39;s blog"></p>
+<p>切换数据库启动的命令行看下，数据库已经关闭了！</p>
+<p><img src="http://img.blog.csdn.net/20161019140901697" alt="jojo&#39;s blog"></p>
 
       
       
