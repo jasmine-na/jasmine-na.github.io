@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>git手册</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#00796b">
+  <meta name="msapplication-TileColor" content="#4E8071"/>
+  
+  
+  <link rel="alternative" href="/atom.xml" title="jojo&#39;s blog" type="application/atom+xml">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css"> 
+</head>
+
+
+<body>
+
+  <div id="container" class="container">
+    <div class="left-col">
+    <div class="intrude-less">
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	</a>
+	<p class="header-subtitle">仅仅活着是不够的</p>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li>
+      </ul>
+    </nav>
+  </header>				
+</div>
+<div class="bottom-logo" style="bottom: 5px;background: url(http://images.missyuan.com/attachments/day_090901/20090901_26d53fd68595b3773beaH7sYHt89zOHT.png)transparent center no-repeat;background-size: 100%;margin: 0 30px;width: 75%;height: 120px;position: absolute;opacity: 0.4;"></div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  <div class="intrude-less">
+    <header id="header" class="inner">
+      <a href="/" class="profilepic">
+        <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	  </a>
+	  <p class="header-subtitle">仅仅活着是不够的</p>
+	  <nav class="header-menu">
+	    <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li><div class="clearfix"></div>
+		</ul>
+	  </nav>
+	</header>				
+  </div>
+</nav>
+
+      <div class="body-wrap">
+<article id="post-git手册" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+    <div class="article-meta">
+      
+<div class="article-date">
+<span class="datetime-published-tag"> 2016-10-27 </span>
+</div>
+
+
+    </div>
+    
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 class="article-title" itemprop="name">
+      git手册
+    </h1>
+  
+
+        
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud block-select">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+
+        
+             <div class="clearfix"></div>
+        
+      </div>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git init                                                  # 初始化本地git仓库（创建新仓库）<br>git config –global user.name “xxx”                       # 配置用户名<br>git config –global user.email “xxx@xxx.com”              # 配置邮件<br>git config –global color.ui true                         # git status等命令自动着色<br>git config –global color.status auto<br>git config –global color.diff auto<br>git config –global color.branch auto<br>git config –global color.interactive auto<br>git config –list 配置列表<br>git clone git+ssh://git@192.168.53.168/VT.git             # clone远程仓库<br>git status                                                # 查看当前版本状态（是否修改）<br>git add xyz                                               # 添加xyz文件至index<br>git add .                                                 # 增加当前子目录下所有更改过的文件至index<br>git commit -m ‘xxx’                                       # 提交<br>git commit –amend -m ‘xxx’                               # 合并上一次提交（用于反复修改）<br>git commit -am ‘xxx’                                      # 将add和commit合为一步<br>git rm xxx                                                # 删除index中的文件<br>git rm -r *                                               # 递归删除<br>git log                                                   # 显示提交日志<br>git log -1                                                # 显示1行日志 -n为n行<br>git log -5<br>git log –stat                                            # 显示提交日志及相关变动文件<br>git log -p -m<br>git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容<br>git show dfb02                                            # 可只用commitid的前几位<br>git show HEAD                                             # 显示HEAD提交日志<br>git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本<br>git tag                                                   # 显示已存在的tag<br>git tag -a v2.0 -m ‘xxx’                                  # 增加v2.0的tag<br>git show v2.0                                             # 显示v2.0的日志及详细内容<br>git log v2.0                                              # 显示v2.0的日志<br>git diff                                                  # 显示所有未添加至index的变更<br>git diff –cached                                         # 显示所有已添加index但还未commit的变更<br>git diff HEAD^                                            # 比较与上一个版本的差异<br>git diff HEAD – ./lib                                    # 比较与HEAD版本lib目录的差异<br>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的<br>git diff origin/master..master –stat                     # 只显示差异的文件，不显示具体内容<br>git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）<br>git branch                                                # 显示本地分支<br>git branch –contains 50089                               # 显示包含提交50089的分支<br>git branch -a                                             # 显示所有分支<br>git branch -r                                             # 显示所有原创分支<br>git branch –merged                                       # 显示所有已合并到当前分支的分支<br>git branch –no-merged                                    # 显示所有未合并到当前分支的分支<br>git branch -m master master_copy                          # 本地分支改名<br>git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出<br>git checkout -b master master_copy                        # 上面的完整版<br>git checkout features/performance                         # 检出已存在的features/performance分支<br>git checkout –track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支<br>git checkout v2.0                                         # 检出版本v2.0<br>git checkout -b devel origin/develop                      # 从远程分支develop创建新本地分支devel并检出<br>git checkout – README                                    # 检出head版本的README文件（可用于修改错误回退）<br>git merge origin/master                                   # 合并远程master分支至当前分支<br>git cherry-pick ff44785404a8e                             # 合并提交ff44785404a8e的修改<br>git push origin master                                    # 将当前分支push到远程master分支<br>git push origin :hotfixes/BJVEP933                        # 删除远程仓库的hotfixes/BJVEP933分支<br>git push –tags                                           # 把所有tag推送到远程仓库<br>git fetch                                                 # 获取所有远程分支（不更新本地分支，另需merge）<br>git fetch –prune                                         # 获取所有原创分支并清除服务器上已删掉的分支<br>git pull origin master                                    # 获取远程分支master并merge到当前分支<br>git mv README README2                                     # 重命名文件README为README2<br>git reset –hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退）<br>git rebase<br>git branch -d hotfixes/BJVEP933                           # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）<br>git branch -D hotfixes/BJVEP933                           # 强制删除分支hotfixes/BJVEP933<br>git ls-files                                              # 列出git index包含的文件<br>git show-branch                                           # 图示当前分支历史<br>git show-branch –all                                     # 图示所有分支历史<br>git whatchanged                                           # 显示提交历史对应的文件修改<br>git revert dfb02e6e4f2f7b573337763e5c0013802e392818       # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818<br>git ls-tree HEAD                                          # 内部命令：显示某个git对象<br>git rev-parse v2.0                                        # 内部命令：显示某个ref对于的SHA1 HASH<br>git reflog                                                # 显示所有提交，包括孤立节点<br>git show HEAD@{5}<br>git show master@{yesterday}                               # 显示master分支昨天的状态<br>git log –pretty=format:’%h %s’ –graph                   # 图示提交日志<br>git show HEAD~3<br>git show -s –pretty=raw 2be7fcb476<br>git stash                                                 # 暂存当前修改，将所有至为HEAD状态<br>git stash list                                            # 查看所有暂存<br>git stash show -p stash@{0}                               # 参考第一次暂存<br>git stash apply stash@{0}                                 # 应用第一次暂存<br>git grep “delete from”                                    # 文件中搜索文本“delete from”<br>git grep -e ‘#define’ –and -e SORT_DIRENT<br>git gc<br>git fsck</p>
+
+      
+      
+      
+        <div class="post-copyright">
+<p><a href="http://yoursite.com/2016/10/27/git手册/">本文</a>为原创，转载请遵守本站<a href="/copyright/">版权声明</a></p>
+<p class="updated-time" >更新于: </span>2016年10月28日 03:10</p>
+</div>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav" class="block-select">
+  
+    <a href="/2016/10/27/npm执行命令后无任何响应（windows下）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          npm执行命令后无任何响应（windows下）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/27/MongoDB安装、启动与关闭/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何在Mac OS X中开启或关闭显示隐藏文件命令</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<div class="duoshuo block-select">
+<div class="commentwrap comments-hidden">
+
+    <div class="comments-main">
+
+    	<div class="ds-thread" data-thread-key="git手册" data-title="git手册" data-url="http://yoursite.com/2016/10/27/git手册/"></div><script type="text/javascript">var duoshuoQuery = {short_name:"jasmine-na"};(function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();</script>
+    </div>
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer" class="block-select">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">&copy; 2015-2016
+        <a href="/aboutme/" class ="aboutme-foot-tag"> liyina</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var ThemeXConfig = {fancybox: false,mathjax: false,animate: false,isHome: false,isPost: true,isArchive: false,isTag: false,isCategory: false,open_in_new: false, CDN_PATH: '' }
+</script>
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/jquery.lazyload.min.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

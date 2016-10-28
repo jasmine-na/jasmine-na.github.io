@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Express 应用生成器express-generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#00796b">
+  <meta name="msapplication-TileColor" content="#4E8071"/>
+  
+  
+  <link rel="alternative" href="/atom.xml" title="jojo&#39;s blog" type="application/atom+xml">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css"> 
+</head>
+
+
+<body>
+
+  <div id="container" class="container">
+    <div class="left-col">
+    <div class="intrude-less">
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	</a>
+	<p class="header-subtitle">仅仅活着是不够的</p>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li>
+      </ul>
+    </nav>
+  </header>				
+</div>
+<div class="bottom-logo" style="bottom: 5px;background: url(http://images.missyuan.com/attachments/day_090901/20090901_26d53fd68595b3773beaH7sYHt89zOHT.png)transparent center no-repeat;background-size: 100%;margin: 0 30px;width: 75%;height: 120px;position: absolute;opacity: 0.4;"></div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  <div class="intrude-less">
+    <header id="header" class="inner">
+      <a href="/" class="profilepic">
+        <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	  </a>
+	  <p class="header-subtitle">仅仅活着是不够的</p>
+	  <nav class="header-menu">
+	    <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li><div class="clearfix"></div>
+		</ul>
+	  </nav>
+	</header>				
+  </div>
+</nav>
+
+      <div class="body-wrap">
+<article id="post-Express 应用生成器express-generator" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+    <div class="article-meta">
+      
+<div class="article-date">
+<span class="datetime-published-tag"> 2016-10-27 </span>
+</div>
+
+
+    </div>
+    
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 class="article-title" itemprop="name">
+      Express 应用生成器express-generator
+    </h1>
+  
+
+        
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud block-select">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+	</div>
+
+
+        
+             <div class="clearfix"></div>
+        
+      </div>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Express 应用生成器</p>
+<p>通过应用生成器工具 express 可以快速创建一个应用的骨架。</p>
+<p>通过如下命令安装：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> express-generator -g</div></pre></td></tr></table></figure>
+<p>-h 选项可以列出所有可用的命令行选项：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ express -h</div><div class="line"></div><div class="line">  Usage: express [<span class="keyword">options</span>] [dir]</div><div class="line"></div><div class="line">  Option<span class="variable">s:</span></div><div class="line"></div><div class="line">    -h, --<span class="keyword">help</span>          output usage information</div><div class="line">    -V, --<span class="keyword">version</span>       output the <span class="keyword">version</span> <span class="keyword">number</span></div><div class="line">    -<span class="keyword">e</span>, --ejs           <span class="built_in">add</span> ejs engine support (defaults <span class="keyword">to</span> jade)</div><div class="line">        --hbs           <span class="built_in">add</span> handlebars engine support</div><div class="line">    -H, --hogan         <span class="built_in">add</span> hogan.js engine support</div><div class="line">    -<span class="keyword">c</span>, --css <span class="symbol">&lt;engine&gt;</span>  <span class="built_in">add</span> stylesheet <span class="symbol">&lt;engine&gt;</span> support (less|stylus|compass|sass) (defaults <span class="keyword">to</span> plain css)</div><div class="line">        --git           <span class="built_in">add</span> .gitignore</div><div class="line">    -<span class="keyword">f</span>, --force         force <span class="keyword">on</span> non-<span class="built_in">empty</span> directory</div></pre></td></tr></table></figure>
+<p>例如，下面的示例就是在当前工作目录下创建一个命名为 myapp 的应用。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$ express myapp</div><div class="line"></div><div class="line">   <span class="string">create :</span> myapp</div><div class="line">   <span class="string">create :</span> myapp/<span class="keyword">package</span>.json</div><div class="line">   <span class="string">create :</span> myapp/app.js</div><div class="line">   <span class="string">create :</span> myapp/<span class="keyword">public</span></div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>javascripts</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>images</div><div class="line">   <span class="string">create :</span> myapp/routes</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/routes/</span>index.js</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/routes/</span>users.js</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>stylesheets</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>stylesheets/style.css</div><div class="line">   <span class="string">create :</span> myapp/views</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>index.jade</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>layout.jade</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>error.jade</div><div class="line">   <span class="string">create :</span> myapp/bin</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/bin/</span>www</div></pre></td></tr></table></figure>
+<p>然后安装所有依赖包：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>cd myapp </div><div class="line"><span class="variable">$ </span>npm install</div></pre></td></tr></table></figure>
+<p>启动这个应用（MacOS 或 Linux 平台）：</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ DEBUG=myapp <span class="built_in">npm</span> start</div></pre></td></tr></table></figure>
+<p>Windows 平台使用如下命令：</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="built_in">set</span> DEBUG=myapp &amp; npm <span class="built_in">start</span></div></pre></td></tr></table></figure>
+<p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了。i</p>
+<p>通过 Express 应用生成器创建的应用一般都有如下目录结构：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── app<span class="selector-class">.js</span></div><div class="line">├── bin</div><div class="line">│   └── www</div><div class="line">├── package<span class="selector-class">.json</span></div><div class="line">├── public</div><div class="line">│   ├── images</div><div class="line">│   ├── javascripts</div><div class="line">│   └── stylesheets</div><div class="line">│       └── style<span class="selector-class">.css</span></div><div class="line">├── routes</div><div class="line">│   ├── index<span class="selector-class">.js</span></div><div class="line">│   └── users<span class="selector-class">.js</span></div><div class="line">└── views</div><div class="line">    ├── error<span class="selector-class">.jade</span></div><div class="line">    ├── index<span class="selector-class">.jade</span></div><div class="line">    └── layout.jade</div></pre></td></tr></table></figure>
+<p>7 directories, 9 files</p>
+
+      
+      
+      
+        <div class="post-copyright">
+<p><a href="http://yoursite.com/2016/10/27/Express 应用生成器express-generator/">本文</a>为原创，转载请遵守本站<a href="/copyright/">版权声明</a></p>
+<p class="updated-time" >更新于: </span>2016年10月28日 03:10</p>
+</div>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav" class="block-select">
+  
+    <a href="/2016/10/27/hexo d后 ERROR Deployer not found- git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          hexo d后 ERROR Deployer not found git
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/27/npm执行命令后无任何响应（windows下）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">npm执行命令后无任何响应（windows下）</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<div class="duoshuo block-select">
+<div class="commentwrap comments-hidden">
+
+    <div class="comments-main">
+
+    	<div class="ds-thread" data-thread-key="Express 应用生成器express-generator" data-title="Express 应用生成器express-generator" data-url="http://yoursite.com/2016/10/27/Express 应用生成器express-generator/"></div><script type="text/javascript">var duoshuoQuery = {short_name:"jasmine-na"};(function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();</script>
+    </div>
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer" class="block-select">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">&copy; 2015-2016
+        <a href="/aboutme/" class ="aboutme-foot-tag"> liyina</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var ThemeXConfig = {fancybox: false,mathjax: false,animate: false,isHome: false,isPost: true,isArchive: false,isTag: false,isCategory: false,open_in_new: false, CDN_PATH: '' }
+</script>
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/jquery.lazyload.min.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

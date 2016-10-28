@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>web开发时自动刷新网页：liveReload安装，sublime 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#00796b">
+  <meta name="msapplication-TileColor" content="#4E8071"/>
+  
+  
+  <link rel="alternative" href="/atom.xml" title="jojo&#39;s blog" type="application/atom+xml">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css"> 
+</head>
+
+
+<body>
+
+  <div id="container" class="container">
+    <div class="left-col">
+    <div class="intrude-less">
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	</a>
+	<p class="header-subtitle">仅仅活着是不够的</p>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li>
+      </ul>
+    </nav>
+  </header>				
+</div>
+<div class="bottom-logo" style="bottom: 5px;background: url(http://images.missyuan.com/attachments/day_090901/20090901_26d53fd68595b3773beaH7sYHt89zOHT.png)transparent center no-repeat;background-size: 100%;margin: 0 30px;width: 75%;height: 120px;position: absolute;opacity: 0.4;"></div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  <div class="intrude-less">
+    <header id="header" class="inner">
+      <a href="/" class="profilepic">
+        <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	  </a>
+	  <p class="header-subtitle">仅仅活着是不够的</p>
+	  <nav class="header-menu">
+	    <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li><div class="clearfix"></div>
+		</ul>
+	  </nav>
+	</header>				
+  </div>
+</nav>
+
+      <div class="body-wrap">
+<article id="post-web开发时自动刷新网页：liveReload安装，sublime 3" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+    <div class="article-meta">
+      
+<div class="article-date">
+<span class="datetime-published-tag"> 2016-10-28 </span>
+</div>
+
+
+    </div>
+    
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 class="article-title" itemprop="name">
+      web开发时自动刷新网页：liveReload安装，sublime 3
+    </h1>
+  
+
+        
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud block-select">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/liveReload/">liveReload</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li></ul>
+	</div>
+
+
+        
+             <div class="clearfix"></div>
+        
+      </div>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>需要插件<br>sublime text3：View in Browser；LiveReload</p>
+<p>chrome：liveReload</p>
+<p>配置方法</p>
+<p><strong>一：sublime text3</strong></p>
+<p>sublime 3下载地址：</p>
+<p><a href="http://download.csdn.net/download/reggergdsg/9541966" target="_blank" rel="external">http://download.csdn.net/download/reggergdsg/9541966</a></p>
+<p><strong>1、在sublime text3安装插件 view in browser</strong></p>
+<p>注意（安装插件之前先安装Package Control：<br><a href="http://blog.csdn.net/weixin_36401046/article/details/52880000，" target="_blank" rel="external">http://blog.csdn.net/weixin_36401046/article/details/52880000，</a><br><a href="http://devework.com/sublime-text-3-package-control.html）" target="_blank" rel="external">http://devework.com/sublime-text-3-package-control.html）</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctrl+<span class="built_in">shift</span>+p</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入<span class="keyword">install</span> <span class="keyword">package</span>回车</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20161021123610219" alt="jojo&#39;s blog"></p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">view</span> <span class="keyword">in</span> browser</div></pre></td></tr></table></figure>
+<p><strong>2、安装成功后，修改默认的浏览器：</strong></p>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">preferences</span>-&gt;</span><span class="function"><span class="title">package</span> setting-&gt;</span><span class="function"><span class="title">view</span> <span class="built_in">in</span> browser-&gt;</span>setting default</div></pre></td></tr></table></figure>
+<p>把firefox改为chrome64</p>
+<p><img src="http://img.blog.csdn.net/20161020221608579" alt="jojo&#39;s blog"></p>
+<p><strong>3、在sublime text3安装插件liveReload</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctrl+<span class="built_in">shift</span>+p</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入<span class="keyword">install</span> <span class="keyword">package</span>回车</div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">liveReload</span></div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161021140437368" alt="jojo&#39;s blog"></p>
+<p><strong>4、liveReload配置</strong></p>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">preferences</span> -&gt;</span> P<span class="function"><span class="title">ackge</span> Settings -&gt;</span> L<span class="function"><span class="title">iveReload</span> -&gt;</span> Settings - Default</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20161021103511910" alt="jojo&#39;s blog"></p>
+<p>输入以下内容保存即可</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"enabled_plugins"</span>: [</div><div class="line">        <span class="string">"SimpleReloadPlugin"</span>,</div><div class="line">        <span class="string">"SimpleRefresh"</span></div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>二、 chrome浏览器安装liveReload插件</strong></p>
+<p><strong>1、</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">方法一：进入chrome插件中心，搜索liveReload，安装即可。</div></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20161020221630579" alt="jojo&#39;s blog"></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">方法二：如果进不到插件中心，下载安装包安装到chrome浏览器：</div></pre></td></tr></table></figure>
+<p> <a href="http://download.csdn.net/download/weixin_36401046/9659158" target="_blank" rel="external">http://download.csdn.net/download/weixin_36401046/9659158</a></p>
+<p><strong>2、</strong>进入chrome扩展程序页面，将livereload中的允许访问文件网址打上勾 </p>
+<p><img src="http://img.blog.csdn.net/20161021103722429" alt="jojo&#39;s blog"></p>
+<p><strong>三、测试</strong><br>重新打开sublime text3，重新启动chrome。<br>在sublime text3编辑一个测试html文件，</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>开心<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>自动刷新<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>按 ctr+alt+v 在chrome浏览器中运行，编辑器下方出现livereload提示，并且点击chrome浏览器的livereload图标中间小圆点由虚变实，说明配置成功。</p>
+<p><img src="http://img.blog.csdn.net/20161020221647486" alt="jojo&#39;s blog"></p>
+<p> <strong>重点内容</strong>：只需要在sublime text3里编辑代码，按 ctr+s 保存，即可在chrome里面看到实时更新。</p>
+<p><img src="http://img.blog.csdn.net/20161021110719643" alt="jojo&#39;s blog"></p>
+<p><strong>如果没有成功自动刷新，把以下走一遍：</strong></p>
+<p>1、找到packages文件夹</p>
+<p><img src="http://img.blog.csdn.net/20161021105053386" alt="jojo&#39;s blog"></p>
+<p> <img src="http://img.blog.csdn.net/20161021105404410" alt="jojo&#39;s blog"></p>
+<p>2、从<a href="https://github.com/Grafikart/ST3-LiveReload" target="_blank" rel="external">https://github.com/Grafikart/ST3-LiveReload</a> 下载压缩包到本地</p>
+<p>3、解压， 重命名为LiveReload，拷贝到packages中</p>
+<p>参考文献：<a href="http://blog.csdn.net/neet007/article/details/51694643" target="_blank" rel="external">http://blog.csdn.net/neet007/article/details/51694643</a></p>
+
+      
+      
+      
+        <div class="post-copyright">
+<p><a href="http://yoursite.com/2016/10/28/web开发时自动刷新网页：liveReload安装，sublime 3/">本文</a>为原创，转载请遵守本站<a href="/copyright/">版权声明</a></p>
+<p class="updated-time" >更新于: </span>2016年10月28日 03:10</p>
+</div>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav" class="block-select">
+  
+  
+    <a href="/2016/10/28/hexo主题sausage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo主题sausage</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<div class="duoshuo block-select">
+<div class="commentwrap comments-hidden">
+
+    <div class="comments-main">
+
+    	<div class="ds-thread" data-thread-key="web开发时自动刷新网页：liveReload安装，sublime 3" data-title="web开发时自动刷新网页：liveReload安装，sublime 3" data-url="http://yoursite.com/2016/10/28/web开发时自动刷新网页：liveReload安装，sublime 3/"></div><script type="text/javascript">var duoshuoQuery = {short_name:"jasmine-na"};(function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();</script>
+    </div>
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer" class="block-select">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">&copy; 2015-2016
+        <a href="/aboutme/" class ="aboutme-foot-tag"> liyina</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var ThemeXConfig = {fancybox: false,mathjax: false,animate: false,isHome: false,isPost: true,isArchive: false,isTag: false,isCategory: false,open_in_new: false, CDN_PATH: '' }
+</script>
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/jquery.lazyload.min.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>hexo+github（windows版+http版），搭建Hexo博客并部署到Github</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#00796b">
+  <meta name="msapplication-TileColor" content="#4E8071"/>
+  
+  
+  <link rel="alternative" href="/atom.xml" title="jojo&#39;s blog" type="application/atom+xml">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css"> 
+</head>
+
+
+<body>
+
+  <div id="container" class="container">
+    <div class="left-col">
+    <div class="intrude-less">
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	</a>
+	<p class="header-subtitle">仅仅活着是不够的</p>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li>
+      </ul>
+    </nav>
+  </header>				
+</div>
+<div class="bottom-logo" style="bottom: 5px;background: url(http://images.missyuan.com/attachments/day_090901/20090901_26d53fd68595b3773beaH7sYHt89zOHT.png)transparent center no-repeat;background-size: 100%;margin: 0 30px;width: 75%;height: 120px;position: absolute;opacity: 0.4;"></div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  <div class="intrude-less">
+    <header id="header" class="inner">
+      <a href="/" class="profilepic">
+        <img src="https://jasmine-na.github.io/img/avatar.jpg" class="block-select js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+	  </a>
+	  <p class="header-subtitle">仅仅活着是不够的</p>
+	  <nav class="header-menu">
+	    <ul>
+        <li><a href="/archives">文章</a></li><li><a href="/tags">标签</a></li><li><a href="/photos">相册</a></li><li><a href="/feedback">留言</a></li><div class="clearfix"></div>
+		</ul>
+	  </nav>
+	</header>				
+  </div>
+</nav>
+
+      <div class="body-wrap">
+<article id="post-hexo+github（windows版+http版），搭建Hexo博客并部署到Github" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+    <div class="article-meta">
+      
+<div class="article-date">
+<span class="datetime-published-tag"> 2016-10-27 </span>
+</div>
+
+
+    </div>
+    
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 class="article-title" itemprop="name">
+      hexo+github（windows版+http版），搭建Hexo博客并部署到Github
+    </h1>
+  
+
+        
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud block-select">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+
+        
+             <div class="clearfix"></div>
+        
+      </div>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://img.blog.csdn.net/20161026182636997" alt="jojo&#39;s blog"></p>
+<p><strong>工具/原料</strong><br>•    Windows（Mac也是差不多，可参照）<br>•    Git<br>•    Node.js</p>
+<p><strong>安装Hexo</strong></p>
+<p>1、利用 npm 命令即可安装。在任意位置点击鼠标右键，选择Git Bash。</p>
+<p> <img src="http://img.blog.csdn.net/20161026182730919" alt="jojo&#39;s blog"></p>
+<p>2、输入命令：</p>
+<blockquote>
+<p>npm install -g hexo</p>
+<p>注意：-g是指全局安装hexo。</p>
+</blockquote>
+<p><strong>创建Hexo文件夹</strong></p>
+<p>1、新建文件夹 Hexo<br>2、</p>
+<blockquote>
+<p>cd Hexo</p>
+<p>hexo init   //Hexo 即会自动在目标文件夹建立网站所需要的所有文件。</p>
+<p>npm install   //安装依赖包</p>
+</blockquote>
+<p><strong>本地查看</strong><br>•    现在我们已经搭建起本地的hexo博客了，执行以下命令(在Hexo文件夹下)，然后到浏览器输入localhost:4000看看。</p>
+<blockquote>
+<p>hexo generate</p>
+<p>hexo server</p>
+</blockquote>
+<p> <img src="http://img.blog.csdn.net/20161026183033027" alt="jojo&#39;s blog"></p>
+<p><strong>注册Github账号</strong><br>•    这里不演示了。</p>
+<p><strong>创建Repository仓库</strong></p>
+<p>登录github后，</p>
+<p><img src="http://img.blog.csdn.net/20161027093752469" alt="jojo&#39;s blog"></p>
+<p><img src="http://img.blog.csdn.net/20161027093814641" alt="jojo&#39;s blog"></p>
+<p><img src="http://img.blog.csdn.net/20161027093832188" alt="jojo&#39;s blog"></p>
+<p>•    注意：创建的时候注意Repository的名字。比如我的Github账号是jasmine-na，那么我应该创建的Repository的名字是：<strong>jasmine-na.github.io</strong>。<br>(必须是Github账号名.github.io)</p>
+<p><img src="http://img.blog.csdn.net/20161027093143442" alt="jojo&#39;s blog"></p>
+<p><strong>修改配置文件</strong><br>1、到你刚刚创建的Repository下，找到以下内容：</p>
+<p> <img src="http://img.blog.csdn.net/20161026183141935" alt="jojo&#39;s blog"></p>
+<p>2、先点击HTTPS，然后复制里面的地址。然后编辑_config.yml文件（在C:\Hexo下）。<br> <img src="http://img.blog.csdn.net/20161026183201545" alt="jojo&#39;s blog"></p>
+<p>3、修改文件里面的deploy。其中的repository就改成你刚刚复制的地址。保存这个文件。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/jasmine-na/jasmine-na.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161027094431301" alt="jojo&#39;s blog"></p>
+<p>（注意格式）</p>
+<p><strong>完成部署</strong></p>
+<p>1、下载hexo-deployer-git</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>2、最后一步，Git Bash下，依次键入以下指令：<br>（注意：每次修改本地文件后，都需要依次键入以下指令）</p>
+<blockquote>
+<p>hexo clean    //清除缓存文件 db.json 和已生成的静态文件 public </p>
+<p>hexo generate //生成网站静态文件到默认设置的 public 文件夹</p>
+<p>hexo deploy //自动生成网站静态文件，并部署到设定的仓库。</p>
+</blockquote>
+<p>hexo deploy过程中会提示你输入账号名和密码，Username是你的Github账号名称，而不是邮箱；Password就是你的Github的密码。</p>
+<p> <img src="http://img.blog.csdn.net/20161026184053081" alt="jojo&#39;s blog"></p>
+<p>2、OK，我们的博客就已经完全搭建起来了，在浏览器输入（当然，是你的用户名）：<br><a href="http://jasmine-na.github.io/" target="_blank" rel="external">http://jasmine-na.github.io/</a></p>
+<p><img src="http://img.blog.csdn.net/20161027101348580" alt="jojo&#39;s blog"></p>
+<p><strong>Tips</strong><br>•    hexo现在支持更加简单的命令格式了，比如：</p>
+<blockquote>
+<p>hexo g == hexo generate</p>
+<p>hexo d == hexo deploy</p>
+<p>hexo s == hexo server</p>
+<p>hexo n == hexo new</p>
+</blockquote>
+<p><strong>更多文章：</strong><br><a href="http://blog.csdn.net/weixin_36401046/article/details/52937108" target="_blank" rel="external">hexo+github（windows版+ssh版），搭建Hexo博客并部署到Github</a></p>
+
+      
+      
+      
+        <div class="post-copyright">
+<p><a href="http://yoursite.com/2016/10/27/hexo+github（windows版+http版），搭建Hexo博客并部署到Github/">本文</a>为原创，转载请遵守本站<a href="/copyright/">版权声明</a></p>
+<p class="updated-time" >更新于: </span>2016年10月28日 03:10</p>
+</div>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav" class="block-select">
+  
+    <a href="/2016/10/27/mac下git需忽略的文件处理办法（mac）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          如何在Mac OS X中开启或关闭显示隐藏文件命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/27/hexo d后 ERROR Deployer not found- git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo d后 ERROR Deployer not found git</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<div class="duoshuo block-select">
+<div class="commentwrap comments-hidden">
+
+    <div class="comments-main">
+
+    	<div class="ds-thread" data-thread-key="hexo+github（windows版+http版），搭建Hexo博客并部署到Github" data-title="hexo+github（windows版+http版），搭建Hexo博客并部署到Github" data-url="http://yoursite.com/2016/10/27/hexo+github（windows版+http版），搭建Hexo博客并部署到Github/"></div><script type="text/javascript">var duoshuoQuery = {short_name:"jasmine-na"};(function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })();</script>
+    </div>
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer" class="block-select">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">&copy; 2015-2016
+        <a href="/aboutme/" class ="aboutme-foot-tag"> liyina</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var ThemeXConfig = {fancybox: false,mathjax: false,animate: false,isHome: false,isPost: true,isArchive: false,isTag: false,isCategory: false,open_in_new: false, CDN_PATH: '' }
+</script>
+
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/jquery.lazyload.min.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
