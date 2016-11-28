@@ -54,6 +54,147 @@
       <div class="body-wrap">
   
     
+<article id="post-如何在Mac OS X中开启或关闭显示隐藏文件命令" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/如何在Mac OS X中开启或关闭显示隐藏文件命令/">如何在Mac OS X中开启或关闭显示隐藏文件命令</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>打开终端，输入：</p>
+<blockquote>
+<p>defaults write com.apple.finder AppleShowAllFiles -bool true </p>
+</blockquote>
+<p>此命令显示隐藏文件</p>
+<blockquote>
+<p>defaults write com.apple.finder AppleShowAllFiles -bool false</p>
+</blockquote>
+<p>此命令关闭显示隐藏文件</p>
+<p>命令运行之后需要重新加载Finder：快捷键option+command+esc，选中Finder，重新启动即可</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-hexo d后 ERROR Deployer not found- git" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/hexo d后 ERROR Deployer not found- git/">hexo d后 ERROR Deployer not found git</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>$ hexo d<br>ERROR Deployer not found: git</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save </p>
+</blockquote>
+<p>即可。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-问题1：有关使用 Hexo 和 GitHub 搭建博客，出现 hexo -d 报错如何解决？（windows下）" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/问题1：有关使用 Hexo 和 GitHub 搭建博客，出现 hexo -d 报错如何解决？（windows下）/">问题1：有关使用 Hexo 和 GitHub 搭建博客，出现 hexo -d 报错如何解决？（windows下）</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">INFO  Deploying: git</div><div class="line">INFO  Clearing .deploy_git <span class="built_in">folder</span>...</div><div class="line">INFO  Copying <span class="built_in">files</span> <span class="built_in">from</span> public <span class="built_in">folder</span>...</div><div class="line">warning: LF will be replaced <span class="keyword">by</span> <span class="literal">CRLF</span> <span class="keyword">in</span> <span class="number">2016</span>/<span class="number">10</span>/<span class="number">26</span>/hello-world/index.html.</div><div class="line">The <span class="built_in">file</span> will have its original <span class="built_in">line</span> endings <span class="keyword">in</span> your working <span class="built_in">directory</span>.</div><div class="line">warning: LF will be replaced <span class="keyword">by</span> <span class="literal">CRLF</span> <span class="keyword">in</span> archives/<span class="number">2016</span>/<span class="number">10</span>/index.html.</div><div class="line">The <span class="built_in">file</span> will have its original <span class="built_in">line</span> endings <span class="keyword">in</span> your working <span class="built_in">directory</span>.</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20161026173849741" alt="jojo&#39;s blog"></p>
+<p>这个问题是这样解决的<br>第一删除你hexo 下面的.deploy_git文件夹<br>第二 运行<br><img src="http://img.blog.csdn.net/20161026173519752" alt="jojo&#39;s blog"><br>第三 重新 hexo clean<br>hexo g<br>hexo d<br>第四 打开自己的网址，进行验证是否成功<br><img src="http://img.blog.csdn.net/20161026173532085" alt="jojo&#39;s blog"></p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
 <article id="post-问题2：有关使用 Hexo 和 GitHub 搭建博客，出现 hexo -d 报错如何解决？（windows下）" class="article article-type-post" itemscope itemprop="blogPost">
 
    
@@ -87,6 +228,51 @@
 <p><img src="http://img.blog.csdn.net/20161026175411418" alt="jojo&#39;s blog"></p>
 <p><img src="http://img.blog.csdn.net/20161026175421827" alt="jojo&#39;s blog"></p>
 <p>然后我把命令切换到Git Bash 环境中运行，有提示输入github的用户名和密码，输入 hexo -d 成功上传了。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-mac下git需忽略的文件处理办法（mac）" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/mac下git需忽略的文件处理办法（mac）/">如何在Mac OS X中开启或关闭显示隐藏文件命令</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://img.blog.csdn.net/20161027012623070" alt="jojo&#39;s blog"></p>
+<p>在.git同级目录下新建.gitignore文件，将要忽略的文件写进去即可。</p>
+<p>忽略前后：</p>
+<p><img src="http://img.blog.csdn.net/20161027013007980" alt="jojo&#39;s blog"></p>
 
       
       

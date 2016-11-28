@@ -54,6 +54,284 @@
       <div class="body-wrap">
   
     
+<article id="post-node.js 使用ejs模板引擎时后缀换成.html" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/node.js 使用ejs模板引擎时后缀换成.html/">node.js 使用ejs模板引擎时后缀换成.html</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.<span class="keyword">set</span>(<span class="string">'view engine'</span>, <span class="string">'jade'</span>);</div></pre></td></tr></table></figure>
+<p>换成</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//将引擎修改为html</span></div><div class="line"><span class="built_in">var</span> jade = <span class="keyword">require</span>(<span class="string">'jade'</span>);<span class="comment">//在app.js的头上定义jade</span></div><div class="line">app.engine(<span class="string">'html'</span>,jade.__express);<span class="comment">//注册html模板引擎</span></div><div class="line">app.<span class="built_in">set</span>(<span class="string">'view engine'</span>, <span class="string">'html'</span>);<span class="comment">//将模板引擎换成html</span></div></pre></td></tr></table></figure>
+<p>修改模板文件的后缀为.html。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-JavaScript常用API总结" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/JavaScript常用API总结/">JavaScript常用API总结</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>下面是我整理的一些JavaScript常用的API清单。</p>
+<p>目录</p>
+<p>元素查找<br>class操作<br>节点操作<br>属性操作<br>内容操作<br>css操作<br>位置大小<br>事件<br>DOM加载完毕<br>绑定上下文<br>去除空格<br>Ajax<br>JSON处理<br>节点遍历<br>元素查找</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">//</span> Node</div><div class="line"><span class="built_in">document</span>.getElementById(id) <span class="regexp">//</span> <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>)</div><div class="line"><span class="built_in">document</span>.querySelector(selectors) <span class="regexp">//</span> <span class="built_in">document</span>.querySelector(<span class="string">'#test div'</span>)</div><div class="line"><span class="built_in">document</span>.doctype</div><div class="line"><span class="built_in">document</span>.documentElement</div><div class="line"><span class="built_in">document</span>.head</div><div class="line"><span class="built_in">document</span>.title</div><div class="line"><span class="built_in">document</span>.body</div><div class="line"> </div><div class="line"><span class="regexp">//</span> NodeList</div><div class="line"><span class="built_in">document</span>.getElementsByClassName(names) <span class="regexp">//</span> <span class="built_in">document</span>.getElementsByClassName(<span class="string">'test'</span>)</div><div class="line"><span class="built_in">document</span>.getElementsByName(name) <span class="regexp">//</span> <span class="built_in">document</span>.getElementsByName(<span class="string">'demo'</span>)</div><div class="line"><span class="built_in">document</span>.getElementsByTagName(name) <span class="regexp">//</span> <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>)</div><div class="line"><span class="built_in">document</span>.getElementsByTagNameNS(namespace, name) <span class="regexp">//</span> <span class="built_in">document</span>.getElementsByTagNameNS(<span class="string">'http://www.w3.org/1999/xhtml'</span>, <span class="string">'div'</span>)</div><div class="line"><span class="built_in">document</span>.querySelectorAll(selectors) <span class="regexp">//</span> <span class="built_in">document</span>.querySelectorAll(<span class="string">'#test div'</span>)</div><div class="line"><span class="built_in">document</span>.links</div><div class="line"><span class="built_in">document</span>.scripts</div><div class="line"><span class="built_in">document</span>.images</div><div class="line"><span class="built_in">document</span>.embeds</div><div class="line"><span class="built_in">document</span>.forms</div></pre></td></tr></table></figure>
+<p>class操作</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ie8</span></div><div class="line"><span class="comment">// add class</span></div><div class="line">el.<span class="built_in">className</span> += <span class="string">' '</span> + <span class="built_in">className</span>;</div><div class="line"> </div><div class="line"><span class="comment">// has class</span></div><div class="line">function hasClass(el,<span class="built_in">className</span>)&#123;</div><div class="line">  return new RegExp(<span class="string">'(^| )'</span> + <span class="built_in">className</span> + <span class="string">'( |$)'</span>, <span class="string">'gi'</span>).test(el.<span class="built_in">className</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// toggle class</span></div><div class="line">function toggleClass(el,<span class="built_in">className</span>)&#123;</div><div class="line">  var classes = el.<span class="built_in">className</span>.split(<span class="string">' '</span>);</div><div class="line">  var existingIndex = -<span class="number">1</span>;</div><div class="line">  <span class="keyword">for</span> (var i = classes.length; i--;) &#123;</div><div class="line">    <span class="keyword">if</span> (classes[i] === <span class="built_in">className</span>)&#123;</div><div class="line">      existingIndex = i;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> (existingIndex &gt;= <span class="number">0</span>)&#123;</div><div class="line">    classes.splice(existingIndex, <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span>&#123;</div><div class="line">    classes.push(<span class="built_in">className</span>);</div><div class="line">  &#125;</div><div class="line">  el.<span class="built_in">className</span> = classes.<span class="built_in">join</span>(<span class="string">' '</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// remove class</span></div><div class="line">function remove(el,<span class="built_in">className</span>)&#123;</div><div class="line">  el.<span class="built_in">className</span> = el.<span class="built_in">className</span>.replace(new RegExp(<span class="string">'(^|\\b)'</span> + <span class="built_in">className</span>.split(<span class="string">' '</span>).<span class="built_in">join</span>(<span class="string">'|'</span>) + <span class="string">'(\\b|$)'</span>, <span class="string">'gi'</span>), <span class="string">' '</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// ie 10</span></div><div class="line">el.classList.add(<span class="built_in">className</span>); <span class="comment">// add class</span></div><div class="line">el.classList.remove(<span class="built_in">className</span>); <span class="comment">// remove class</span></div><div class="line">el.classList.contains(<span class="built_in">className</span>); <span class="comment">// has class</span></div><div class="line">el.classList.toggle(<span class="built_in">className</span>); <span class="comment">// toggle class</span></div></pre></td></tr></table></figure>
+<p>节点操作</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 创建</span></div><div class="line"><span class="keyword">var</span> el = document.createElement(name);</div><div class="line"> </div><div class="line"><span class="comment">// 复制</span></div><div class="line">el.cloneNode(<span class="keyword">true</span>); <span class="comment">// 默认为false(克隆节点及其后代), true(克隆节点及其属性，以及后代)</span></div><div class="line"> </div><div class="line"><span class="comment">// 向节点添加最后一个子节点</span></div><div class="line"><span class="keyword">parent</span>.appendChild(el);</div><div class="line"> </div><div class="line"><span class="comment">// 在指定子节点之前插入新的子节点</span></div><div class="line"><span class="keyword">parent</span>.insertBefore(el, <span class="keyword">parent</span>.childNodes[<span class="number">0</span>]);</div><div class="line"> </div><div class="line"><span class="comment">// insertAdjacentHTML方法</span></div><div class="line">el.insertAdjacentHTML(where, htmlString);</div><div class="line">el.insertAdjacentHTML(<span class="string">'beforeBegin'</span>, htmlString); <span class="comment">// 在该元素前插入</span></div><div class="line">el.insertAdjacentHTML(<span class="string">'afterBegin'</span>, htmlString); <span class="comment">// 在该元素第一个子元素前插入</span></div><div class="line">el.insertAdjacentHTML(<span class="string">'beforeEnd'</span>, htmlString); <span class="comment">// 在该元素最后一个子元素后面插入</span></div><div class="line">el.insertAdjacentHTML(<span class="string">'afterEnd'</span>, htmlString); <span class="comment">// 在该元素后插入</span></div><div class="line"> </div><div class="line"><span class="comment">// 父元素</span></div><div class="line">el.parentNode</div><div class="line"> </div><div class="line"><span class="comment">// 删除节点</span></div><div class="line">el.parentNode.removeChild(el);</div><div class="line"> </div><div class="line"><span class="comment">// 兄弟节点 ie9+</span></div><div class="line"><span class="keyword">var</span> siblings = <span class="keyword">Array</span>.prototype.filter.call(el.parentNode.children, <span class="function"><span class="keyword">function</span><span class="params">(child)</span></span>&#123;</div><div class="line">  <span class="keyword">return</span> child !== el;</div><div class="line">&#125;)</div><div class="line"> </div><div class="line"><span class="comment">// 下一个兄弟节点</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">nextElementSibling</span><span class="params">(el)</span> </span>&#123;</div><div class="line">  <span class="keyword">do</span> &#123; el = el.nextSibling; &#125; <span class="keyword">while</span> ( el &amp;&amp; el.nodeType !== <span class="number">1</span> );</div><div class="line">  <span class="keyword">return</span> el;</div><div class="line">&#125;</div><div class="line">nextElementSibling(el);</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.nextElementSibling;</div><div class="line"> </div><div class="line"><span class="comment">// 上一个兄弟节点</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">previousElementSibling</span><span class="params">(el)</span> </span>&#123;</div><div class="line">  <span class="keyword">do</span> &#123; </div><div class="line">    el = el.previousSibling;</div><div class="line">  &#125; </div><div class="line">  <span class="keyword">while</span> ( el &amp;&amp; el.nodeType !== <span class="number">1</span> );</div><div class="line">  <span class="keyword">return</span> el;</div><div class="line">&#125;</div><div class="line">previousElementSibling(el);</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.previousElementSibling;</div><div class="line"> </div><div class="line"><span class="comment">// Children</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line"><span class="keyword">var</span> children = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = el.children.length; i--;) &#123;</div><div class="line">  <span class="comment">// Skip comment nodes on IE8</span></div><div class="line">  <span class="keyword">if</span> (el.children[i].nodeType != <span class="number">8</span>)</div><div class="line">    children.unshift(el.children[i]);</div><div class="line">&#125;</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.children</div></pre></td></tr></table></figure>
+<p>属性操作</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取属性值</span></div><div class="line">el.getAttribute(<span class="string">'alt'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// 设置属性值</span></div><div class="line">el.setAttribute(<span class="string">'alt'</span>, <span class="string">'图片描述'</span>);</div><div class="line">内容操作</div><div class="line"></div><div class="line"><span class="comment">// 获取元素内容</span></div><div class="line">el.innerHTML</div><div class="line"><span class="comment">// 设置元素内容</span></div><div class="line">el.innerHTML = <span class="keyword">string</span></div><div class="line"><span class="comment">// 获取元素内容(包含元素自身)</span></div><div class="line">el.outerHTML</div><div class="line"><span class="comment">// 设置元素内容(包含元素自身)</span></div><div class="line">el.outerHTML = <span class="keyword">string</span></div><div class="line"> </div><div class="line"><span class="comment">// 获取文本内容</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line">el.innerText</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.textContent</div><div class="line"><span class="comment">// 设置文本内容</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line">el.innerText = <span class="keyword">string</span></div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.textContent = <span class="keyword">string</span></div></pre></td></tr></table></figure>
+<p>CSS操作</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取css样式</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line">el.currentStyle[attrName]</div><div class="line"><span class="comment">// ie9+</span></div><div class="line"><span class="built_in">window</span>.getComputedStyle(el)[attrName]</div><div class="line"><span class="comment">// 伪类</span></div><div class="line"><span class="built_in">window</span>.getComputedStyle(el , <span class="string">":after"</span>)[attrName];</div><div class="line"> </div><div class="line"><span class="comment">// 设置CSS样式</span></div><div class="line">el.style.display = <span class="string">'none'</span>;</div><div class="line">位置大小</div><div class="line"></div><div class="line"><span class="comment">// getBoundingClientRect返回一个对象，包含top,left,right,bottom,width,height</span></div><div class="line"><span class="comment">// width、height 元素自身宽高</span></div><div class="line"><span class="comment">// top 元素上外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// right 元素右外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// bottom 元素下外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// left 元素左外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// width 元素自身宽(包含border,padding) </span></div><div class="line"><span class="comment">// height 元素自身高(包含border,padding) </span></div><div class="line"> </div><div class="line"><span class="comment">// 元素在页面上的偏移量</span></div><div class="line"><span class="built_in">var</span> <span class="built_in">rect</span> = el.getBoundingClientRect()</div><div class="line"><span class="keyword">return</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="built_in">rect</span>.top + <span class="built_in">document</span>.body.scrollTop,</div><div class="line">  <span class="attribute">left</span>: <span class="built_in">rect</span>.left + <span class="built_in">document</span>.body.scrollLeft</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 元素自身宽(包含border,padding) </span></div><div class="line">el.offsetWidth</div><div class="line"><span class="comment">// 元素自身高(包含border,padding) </span></div><div class="line">el.offsetHeight</div><div class="line"><span class="comment">// 元素的左外边框至包含元素的左内边框之间的像素距离</span></div><div class="line">el.offsetLeft</div><div class="line"><span class="comment">// 元素的上外边框至包含元素的上内边框之间的像素距离</span></div><div class="line">el.offsetTop </div><div class="line"> </div><div class="line"><span class="comment">//通常认为 &lt;html&gt; 元素是在 Web 浏览器的视口中滚动的元素（IE6 之前版本运行在混杂模式下时是 &lt;body&gt; 元素） </span></div><div class="line"><span class="comment">//因此，带有垂直滚动条的页面总高度就是 document.documentElement.scrollHeight</span></div><div class="line"><span class="comment">// 在没有滚动条的情况下，元素内容的总高度</span></div><div class="line">scrollHeight</div><div class="line"><span class="comment">// 在没有滚动条的情况下，元素内容的总宽度</span></div><div class="line">scrollWidth</div><div class="line"><span class="comment">// 被隐藏在内容区域左侧的像素数。通过设置这个属性可以改变元素的滚动位置</span></div><div class="line">scrollLeft</div><div class="line"><span class="comment">// 被隐藏在内容区域上方的像素数。通过设置这个属性可以改变元素的滚动位置</span></div><div class="line">scrollTop</div><div class="line"> </div><div class="line"><span class="comment">// 视口大小</span></div><div class="line"><span class="comment">// ie9+</span></div><div class="line"><span class="built_in">var</span> pageWidth = <span class="built_in">window</span>.innerWidth,</div><div class="line">    pageHeight = <span class="built_in">window</span>.innerHeight;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> pageWidth != <span class="string">"number"</span>)&#123; </div><div class="line">  <span class="comment">// ie8</span></div><div class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.compatMode == <span class="string">"CSS1Compat"</span>)&#123;</div><div class="line">    pageWidth = <span class="built_in">document</span>.documentElement.clientWidth;</div><div class="line">    pageHeight = <span class="built_in">document</span>.documentElement.clientHeight;</div><div class="line">  &#125; <span class="title">else</span> &#123; </div><div class="line">    <span class="comment">// ie6混杂模式</span></div><div class="line">    pageWidth = <span class="built_in">document</span>.body.clientWidth;</div><div class="line">    pageHeight = <span class="built_in">document</span>.body.clientHeight;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 绑定事件</span></div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.addEventListener(eventName, handler , Booleans); <span class="comment">// Booleans默认false(事件在冒泡阶段执行),true(事件在捕获阶段执行)</span></div><div class="line"><span class="comment">// ie8</span></div><div class="line">el.attachEvent(<span class="string">'on'</span> + eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  handler.call(el);</div><div class="line">&#125;);</div><div class="line"> </div><div class="line"><span class="comment">// 移除事件</span></div><div class="line"><span class="comment">// ie9+</span></div><div class="line">el.removeEventListener(eventName, handler); </div><div class="line"><span class="comment">// ie8</span></div><div class="line">el.detachEvent(<span class="string">'on'</span> + eventName, handler);</div><div class="line"> </div><div class="line"><span class="comment">// 事件触发</span></div><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.createEvent) &#123;</div><div class="line">  <span class="comment">// ie9+</span></div><div class="line">  <span class="keyword">var</span> event = <span class="built_in">document</span>.createEvent(<span class="string">'HTMLEvents'</span>);</div><div class="line">  event.initEvent(<span class="string">'change'</span>, <span class="literal">true</span>, <span class="literal">false</span>);</div><div class="line">  el.dispatchEvent(event);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="comment">// ie8</span></div><div class="line">  el.fireEvent(<span class="string">'onchange'</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// event对象</span></div><div class="line"><span class="keyword">var</span> event = <span class="built_in">window</span>.event||event;</div><div class="line"> </div><div class="line"><span class="comment">// 事件的目标节点</span></div><div class="line"><span class="keyword">var</span> target = event.target || event.srcElement;</div><div class="line"> </div><div class="line"><span class="comment">// 事件代理</span></div><div class="line">ul.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (event.target.tagName.toLowerCase() === <span class="string">'li'</span>) &#123;</div><div class="line">    <span class="built_in">console</span>.log(event.target.innerHTML)</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line">DOM加载完毕</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ready</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.readyState != <span class="string">'loading'</span>)&#123;</div><div class="line">    <span class="comment">// ie9+</span></div><div class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, fn);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// ie8</span></div><div class="line">    <span class="built_in">document</span>.attachEvent(<span class="string">'onreadystatechange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (<span class="built_in">document</span>.readyState != <span class="string">'loading'</span>)&#123;</div><div class="line">        fn();</div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>绑定上下文</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ie8</span></div><div class="line">fn.apply(context, <span class="built_in">arguments</span>);</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">fn.bind(context);</div><div class="line">去除空格</div><div class="line"></div><div class="line"><span class="comment">// ie8</span></div><div class="line">string.replace(<span class="regexp">/^\s+|\s+$/g</span>, <span class="string">''</span>);</div><div class="line"><span class="comment">// ie9+</span></div><div class="line">string.trim();</div><div class="line">ajax</div><div class="line"></div><div class="line"><span class="comment">// GET</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">request.open(<span class="string">'GET'</span>, <span class="string">'user.php?fname=Bill&amp;lname=Gates'</span>, <span class="literal">true</span>); <span class="comment">// false（同步）</span></div><div class="line">request.send();</div><div class="line"> </div><div class="line"><span class="comment">// ie8</span></div><div class="line">request.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.readyState === <span class="number">4</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.status &gt;= <span class="number">200</span> &amp;&amp; <span class="keyword">this</span>.status &lt; <span class="number">400</span>) &#123;</div><div class="line">      <span class="comment">// Success!</span></div><div class="line">      <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="keyword">this</span>.responseText);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="comment">// 错误</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="comment">// ie9+</span></div><div class="line">request.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (request.status &gt;= <span class="number">200</span> &amp;&amp; request.status &lt; <span class="number">400</span>) &#123;</div><div class="line">    <span class="comment">// Success!</span></div><div class="line">    <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(request.responseText);</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// 服务器返回出错</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">request.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 连接错误</span></div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="comment">// POST</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest(); </div><div class="line">request.open(<span class="string">'POST'</span>, <span class="string">'user.php'</span>, <span class="literal">true</span>); <span class="comment">// false（同步）</span></div><div class="line">request.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">request.send(dataString);</div></pre></td></tr></table></figure>
+<p>JSON处理</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">JSON</span>.parse(<span class="built_in">string</span>);</div><div class="line"><span class="built_in">JSON</span>.String(<span class="built_in">Object</span>)</div></pre></td></tr></table></figure>
+<p>节点遍历</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">forEach</span><span class="params">( nodeList, callback )</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span>(<span class="keyword">Array</span>.prototype.<span class="keyword">forEach</span>)&#123;</div><div class="line">    <span class="comment">// ie9+</span></div><div class="line">    <span class="keyword">Array</span>.prototype.<span class="keyword">forEach</span>.call( nodeList, callback );</div><div class="line">  &#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// ie8</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; nodeList.length; i++)&#123;</div><div class="line">      callback(nodeList[i], i);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">forEach</span>(document.querySelectorAll(selector),<span class="function"><span class="keyword">function</span><span class="params">(el, i)</span></span>&#123;</div><div class="line"> </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-Vue.js实践：一个Node.js+mongoDB+Vue.js的博客内容管理系统" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/Vue.js实践：一个Node.js+mongoDB+Vue.js的博客内容管理系统/">Vue.js实践：一个Node.js+mongoDB+Vue.js的博客内容管理系统</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>项目来源</strong><br>以前曾用过WordPress搭建自己的博客网站，但感觉WordPress很是臃肿。所以一直想自己写一个博客内容管理器。</p>
+<p>正好近日看完了Vue各个插件的文档，就用着Vue尝试写了这个简约的博客内容管理器（CMS）。</p>
+<p><strong>完成的功能</strong></p>
+<ul>
+<li>一个基本的博客内容管理器功能，如后台登陆，发布并管理文章等 支持markdown语法编辑</li>
+<li>支持代码高亮 </li>
+<li>可以管理博客页面的链接</li>
+<li>博客页面对移动端适配优化 </li>
+<li>账户管理(修改密码)</li>
+<li>页面足够大气、酷炫~</li>
+</ul>
+<p>于是，为了彰显一贯的酷炫，我给后台写了一套星空主题。。。</p>
+<p><strong>登陆页面</strong></p>
+<p><img src="http://img.blog.csdn.net/20161128134443650" alt="这里写图片描述"></p>
+<p><strong>后台管理页面</strong></p>
+<p><img src="http://img.blog.csdn.net/20161128133623161" alt="这里写图片描述"><br>但博客页面最后没用后台的星空主题，主要是觉得黑色不太好搭配。</p>
+<p>于是我想，既然前端都是用Vue.js写的，那就参chao考xi一下Vue.js尤雨溪的博客样式吧！</p>
+<p>在这基础上博客页面又加了自己写的canvas动画，应该是足够优雅了~<br><img src="http://img.blog.csdn.net/20161128134724018" alt="这里写图片描述"></p>
+<p><a href="http://115.28.90.175:90/#" target="_blank" rel="external">Demo</a></p>
+<p>登陆后台按钮在页面最下方“站长登陆”，可以以游客身份登入后台系统。</p>
+<p><a href="https://github.com/ycwalker/CMS-of-Blog" target="_blank" rel="external">源码</a></p>
+<p><strong>用到的技术和实现思路</strong><br>前端：Vue全家桶</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue<span class="selector-class">.js</span></div><div class="line">Vue-Cli</div><div class="line">Vue-Resource</div><div class="line">Vue-Validator</div><div class="line">Vue-Router</div><div class="line">Vuex</div><div class="line">Vue-loader</div></pre></td></tr></table></figure>
+<p>后端</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Node</span>.<span class="title">js</span></div><div class="line">mongoDB (mongoose)</div><div class="line">Express</div></pre></td></tr></table></figure>
+<p>工具和语言</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Webpack</span></div><div class="line">ES6</div><div class="line">SASS</div><div class="line">Jade</div></pre></td></tr></table></figure>
+<p>整体思路</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Node</span><span class="title">服务端除了主页外，不做模板渲染，渲染交给浏览器完成</span></div><div class="line">Node服务端不做任何路由切换的内容，这部分交给Vue-Router完成</div><div class="line"><span class="keyword">Node</span><span class="title">服务端只用来接收请求，查询数据库并用来返回值</span></div></pre></td></tr></table></figure>
+<p>所以这样做前后端几乎完全解耦，只要约定好restful风格的数据接口，和数据存取格式就OK啦。</p>
+<p>后端我用了mongoDB做数据库，并在Express中通过mongoose操作mongoDB，省去了复杂的命令行，通过Javascript操作无疑方便了很多。</p>
+<p>简单的说一下Vue的各个插件：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Vue-<span class="string">Cli:</span>官方的脚手架，用来初始化项目</div><div class="line">Vue-Resource：可以看作一个Ajax库，通过在跟组件引入，可以方便的注入子组件。子组件以<span class="keyword">this</span>.$http调用</div><div class="line">Vue-Validator：用来验证表单</div><div class="line">Vue-Router：官方的路由工具，用来切换子组件，是用来做SPA应用的关键</div><div class="line">Vuex：控制组件中数据的流动，使得数据流动更加清晰，有迹可循。通过官方的vue-devtools可以无缝对接</div><div class="line">Vue-loader：webpack中对Vue文件的加载器</div></pre></td></tr></table></figure>
+<p>文件目录<br><img src="http://img.blog.csdn.net/20161128134956412" alt="这里写图片描述"><br>我将前端的文件统一放到了src目录下，其中的mian.js是webpack的入口。</p>
+<p>所有页面分割成一个单一的vue组件，放在componentss中，通过入口文件mian.js，由webpack打包生成，生成的文件放在public文件夹下。</p>
+<p>后端文件放在server文件夹内，这就是基于Express的node服务器，在server文件夹内执行<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">node</span> <span class="title">www</span></div></pre></td></tr></table></figure></p>
+<p>就可以启动Node服务器，默认侦听3000端口。<br><strong>关于Vue-Cli</strong><br>我只是使用了simple的template，相对于默认的template，simple的配置简单得多，但已经有了浏览器自动刷新，生产环境代码压缩等功能。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue init simple CMS-<span class="keyword">of</span>-Blog</div></pre></td></tr></table></figure>
+<p></p><p>以下是Vue-Cli生成的webpack的配置文件，我只做了一点小改动。</p><p></p>
+<p></p><p>话说React.js里就没用像Vue-Cli这样好用的脚手架，还是Vue.js简单优雅。。</p><br><strong>Webpack.config.js</strong><p></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    entry: <span class="string">'./src/main.js'</span>,</div><div class="line">    output: &#123;</div><div class="line">        path: path.resolve(__dirname, <span class="string">'./public'</span>),</div><div class="line">        publicPath: <span class="string">'/public/'</span>,</div><div class="line">        filename: <span class="string">'build.js'</span>,</div><div class="line">    &#125;,</div><div class="line">    resolveLoader: &#123;</div><div class="line">        root: path.join(__dirname, <span class="string">'node_modules'</span>),</div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">module</span>: &#123;</div><div class="line">        loaders: [</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.vue$/</span>,</div><div class="line">                loader: <span class="string">'vue'</span></div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.js$/</span>,</div><div class="line">                loader: <span class="string">'babel'</span>,</div><div class="line">                exclude: <span class="regexp">/node_modules/</span></div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.json$/</span>,</div><div class="line">                loader: <span class="string">'json'</span></div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.html$/</span>,</div><div class="line">                loader: <span class="string">'vue-html'</span></div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: <span class="regexp">/\.(png|jpg|gif|svg)$/</span>,</div><div class="line">                loader: <span class="string">'url'</span>,</div><div class="line">                query: &#123;</div><div class="line">                    limit: <span class="number">10000</span>,</div><div class="line">                    name: <span class="string">'[name].[ext]?[hash]'</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            , &#123;</div><div class="line">                test: <span class="regexp">/\.(woff|svg|eot|ttf)\??.*$/</span>,</div><div class="line">                loader: <span class="string">'url-loader?limit=50000&amp;name=[path][name].[ext]'</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    babel: &#123;</div><div class="line">        presets: [<span class="string">'es2015'</span>],</div><div class="line">    &#125;,</div><div class="line">    devServer: &#123;</div><div class="line">        historyApiFallback: <span class="literal">true</span>,</div><div class="line">        noInfo: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    devtool: <span class="string">'#eval-source-map'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">'production'</span>) &#123;</div><div class="line">    <span class="built_in">module</span>.exports.devtool = <span class="string">'#source-map'</span></div><div class="line">    <span class="comment">// http://vue-loader.vuejs.org/en/workflow/production.html</span></div><div class="line">    <span class="built_in">module</span>.exports.plugins = (<span class="built_in">module</span>.exports.plugins || []).concat([</div><div class="line">        <span class="keyword">new</span> webpack.DefinePlugin(&#123;</div><div class="line">            <span class="string">'process.env'</span>: &#123;</div><div class="line">                NODE_ENV: <span class="string">'"production"'</span></div><div class="line">            &#125;</div><div class="line">        &#125;),</div><div class="line">        <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</div><div class="line">            output: &#123;</div><div class="line">                comments: <span class="literal">false</span>,</div><div class="line">            &#125;,</div><div class="line">            compress: &#123;</div><div class="line">                warnings: <span class="literal">false</span></div><div class="line">            &#125;</div><div class="line">        &#125;),</div><div class="line">        <span class="keyword">new</span> webpack.optimize.OccurenceOrderPlugin()</div><div class="line">    ])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看出尤大大帮我们把浏览器自动刷新，热加载和生产环境的代码压缩都写好了，简直超贴心。</p>
+<p>然而实际项目中，我还是碰到一个麻烦的问题，下面是package.json中的script脚本</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"dev"</span>: <span class="string">"webpack-dev-server --inline --hot"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack --progress --hide-modules"</span>,</div><div class="line">    <span class="string">"watch"</span>: <span class="string">"webpack --progress --color --watch"</span>,</div><div class="line">    <span class="string">"server"</span>: <span class="string">"supervisor ./server/www"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<p>运行</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">run</span><span class="bash"> dev</span></div></pre></td></tr></table></figure>
+<p>后，浏览器在8080端口开了一个服务器，然而这个服务器是用来服务前端页面的，也就是说，从这里启动服务器而不是开启Node服务器会造成数据无法交互，毕竟这个服务器不能连接数据库。但这个端口是可以在文件修改之后自动刷新浏览器的。</p>
+<p>然后，通过分别执行</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">run</span><span class="bash"> watch</span></div><div class="line">npm <span class="keyword">run</span><span class="bash"> server</span></div></pre></td></tr></table></figure>
+<p>来侦听文件改动，并重启Node服务器，此时浏览器是不能自动刷新的。找了一些方法但终归没解决。习惯了自动浏览器刷新，碰到这种情况蛮蛋疼的。</p>
+<p>于是只好这样：</p>
+<p>在修改样式的时候使用8080端口的服务器，在修改数据交互的时候手动刷新在3000端口服务器的浏览器。</p>
+<p>虽然不是很方便，但至少通过supervisor不用自己重启Node服务器了。。。</p>
+<p><strong>关于Vue-Router</strong><br>因为写的是但也应用（SPA），服务器不负责路由，所以路由方面交给Vue-Router来控制。</p>
+<p>下面是根组件，路由控制就在这里，组件挂载在body元素下：</p>
+<p><strong>main.js</strong></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter()</div><div class="line"></div><div class="line">router.<span class="keyword">map</span>(&#123;</div><div class="line">    <span class="string">'/'</span>: &#123;</div><div class="line">        componen<span class="variable">t:</span> Archive</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'login'</span>: &#123;</div><div class="line">        componen<span class="variable">t:</span> Login</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'/article'</span>: &#123;</div><div class="line">        componen<span class="variable">t:</span> Article</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'/console'</span>: &#123;</div><div class="line">        componen<span class="variable">t:</span> Console,</div><div class="line">        subRoute<span class="variable">s:</span> &#123;</div><div class="line">            <span class="string">'/'</span>: &#123;</div><div class="line">                componen<span class="variable">t:</span> ArticleList</div><div class="line">            &#125;,</div><div class="line">            <span class="string">'/editor'</span>: &#123;</div><div class="line">                componen<span class="variable">t:</span> Editor</div><div class="line">            &#125;,</div><div class="line">            <span class="string">'/articleList'</span>: &#123;</div><div class="line">                componen<span class="variable">t:</span> ArticleList</div><div class="line">            &#125;,</div><div class="line">            <span class="string">'/menu'</span>: &#123;</div><div class="line">                componen<span class="variable">t:</span> Links</div><div class="line">            &#125;,</div><div class="line">            <span class="string">'account'</span>: &#123;</div><div class="line">                componen<span class="variable">t:</span> Account</div><div class="line">            &#125;,</div><div class="line">        &#125;,</div><div class="line">    &#125;,</div><div class="line">&#125;)</div><div class="line"><span class="keyword">let</span> App = Vue.<span class="built_in">extend</span>(&#123;</div><div class="line">    data()&#123;</div><div class="line">        <span class="keyword">return</span> &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    component<span class="variable">s:</span> &#123;Waiting,Pop,NightSky,MyCanvas&#125;,</div><div class="line">    http: &#123;</div><div class="line">        roo<span class="variable">t:</span> <span class="string">'/'</span></div><div class="line">    &#125;,</div><div class="line">    computed: &#123;</div><div class="line">        waitin<span class="variable">g:</span> ()=&gt;store.state.waiting,</div><div class="line">        <span class="keyword">pop</span>:()=&gt;store.state.popPara.<span class="keyword">pop</span>,</div><div class="line">        <span class="keyword">b</span><span class="variable">g:</span>()=&gt;store.state.bg,</div><div class="line">    &#125;,</div><div class="line">    store</div><div class="line">&#125;)</div><div class="line"></div><div class="line">router.start(App, <span class="string">'body'</span>)</div></pre></td></tr></table></figure>
+<p><strong>对应的文档首页 index.html</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Blog-CMS<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">waiting</span> <span class="attr">v-if</span>=<span class="string">"waiting"</span>&gt;</span><span class="tag">&lt;/<span class="name">waiting</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">pop</span> <span class="attr">v-show</span>=<span class="string">"pop"</span>&gt;</span><span class="tag">&lt;/<span class="name">pop</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"bg"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"public/build.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>可以看到路由控制在body元素下的router-view中。之前的waiting，pop和component元素分别是等待效果（就是转圈圈）的弹出层，信息的弹出层，和背景样式的切换。</p>
+<p>其实这个index.html是有express通过jade生成的，实际项目中并没有html文件，我是把生成好的html放在这里方便展示。</p>
+<p>关于Vue-loader<br>Vue-loader是Vue官方支持webpack的工具，用来将组件写在一个文件里。之前的目录中，有很多分割好的vue文件，每一个文件是一个独立的组件。</p>
+<p>比如，这是一个弹出层的组件：</p>
+<p><strong>Pop.vue</strong></p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"shade"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="template-variable">&#123;&#123;getPopPara.content&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"button"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"ok"</span> @<span class="attr">click</span>=<span class="string">"ok"</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"cancel"</span> @<span class="attr">click</span>=<span class="string">"cancel"</span></span></div><div class="line">                        <span class="attr">v-if</span>=<span class="string">"getPopPara.cb2"</span>&gt;取消</div><div class="line">                <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">import</span> &#123;getPopPara&#125; <span class="keyword">from</span> <span class="string">'../vuex/getters'</span></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span>&#123;</div><div class="line">        <span class="attr">vuex</span>: &#123;</div><div class="line">            <span class="attr">getters</span>: &#123;</div><div class="line">                getPopPara,</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">methods</span>: &#123;</div><div class="line">            ok()&#123;</div><div class="line">                <span class="keyword">let</span> fn = <span class="keyword">this</span>.getPopPara.cb1</div><div class="line">                <span class="keyword">typeof</span> fn == <span class="string">'function'</span> &amp;&amp; fn()</div><div class="line">            &#125;,</div><div class="line">            cancel()&#123;</div><div class="line">                <span class="keyword">let</span> fn = <span class="keyword">this</span>.getPopPara.cb2</div><div class="line">                <span class="keyword">typeof</span> fn == <span class="string">'function'</span> &amp;&amp; fn()</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"sass"</span>&gt;</span><span class="css"></span></div><div class="line">    @<span class="keyword">import</span> <span class="string">"../SCSS/Pop.scss"</span>;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>每一个vue文件都有三个部分（其实是可选的），分别是template，script和style，这也很好理解，就是把html，JS和CSS合并在一起写了嘛。</p>
+<p>这个弹窗组件，通过vuex获得其他组件传递过来的参数，参数是一个对象，包括弹出层的展示信息和点击确定或取消时的回调函数。</p>
+<p>因为编辑器不支持在vue文件中用sass语法，所以我把sass文件放在外部，通过@import引入。</p>
+<p>关于Vue-Resource<br>Vue-Resource可以看成一个与Vue集成的Ajax库，用来创建xhr和获取xhr的response。</p>
+<p>因为和Vue高度集成，所以在vue组件中使用很方便。</p>
+<p>Article.vue</p>
+<figure class="highlight twig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-header</span>&gt;</span><span class="tag">&lt;/<span class="name">my-header</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"article"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post-block"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span><span class="template-variable">&#123;&#123;title&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-info"</span>&gt;</span><span class="template-variable">&#123;&#123;<span class="name">date</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-content"</span></span></div><div class="line">                 <span class="attr">v-html</span>=<span class="string">"content | marked"</span>&gt;</div><div class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">my-footer</span>&gt;</span><span class="tag">&lt;/<span class="name">my-footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">import</span> myHeader     <span class="keyword">from</span> <span class="string">'./MyHeader.vue'</span></div><div class="line">    <span class="keyword">import</span> myFooter     <span class="keyword">from</span> <span class="string">'./MyFooter.vue'</span></div><div class="line">    <span class="keyword">import</span> marked       <span class="keyword">from</span> <span class="string">'../js/marked.min.js'</span></div><div class="line">    <span class="keyword">import</span> &#123;bgToggle&#125;   <span class="keyword">from</span> <span class="string">'../vuex/actions'</span></div><div class="line"></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span>&#123;</div><div class="line">        data()&#123;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">title</span>: <span class="string">''</span>,</div><div class="line">                <span class="attr">date</span>: <span class="string">''</span>,</div><div class="line">                <span class="attr">content</span>: <span class="string">''</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">filters</span>: &#123;</div><div class="line">            marked</div><div class="line">        &#125;,</div><div class="line">        created()&#123;</div><div class="line">            <span class="keyword">let</span> id = <span class="keyword">this</span>.$route.query.id</div><div class="line">            <span class="keyword">this</span>.$http.get(<span class="string">'/article?id='</span> + id)</div><div class="line">                    .then(<span class="function">(<span class="params">response</span>)=&gt;</span> &#123;</div><div class="line">                        <span class="keyword">let</span> body = <span class="built_in">JSON</span>.parse(response.body)</div><div class="line">                        <span class="keyword">this</span>.content = body.content</div><div class="line">                        <span class="keyword">this</span>.title = body.title</div><div class="line">                        <span class="keyword">let</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(body.date)</div><div class="line">                        <span class="keyword">this</span>.date = d.getFullYear() + <span class="string">'年'</span> +</div><div class="line">                                (d.getMonth() + <span class="number">1</span>) + <span class="string">'月'</span> +</div><div class="line">                                d.getDate() + <span class="string">'日'</span></div><div class="line">                    &#125;, (response)=&gt; &#123;</div><div class="line">                        <span class="built_in">console</span>.log(response)</div><div class="line">                    &#125;)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">components</span>: &#123;</div><div class="line">            myHeader,</div><div class="line">            myFooter</div><div class="line">        &#125;,</div><div class="line">        ready()&#123;</div><div class="line">            <span class="keyword">this</span>.bgToggle(<span class="string">'MyCanvas'</span>)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">vuex</span>:&#123;</div><div class="line">            <span class="attr">actions</span>:&#123;</div><div class="line">                bgToggle</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"sass"</span>&gt;</span><span class="css"></span></div><div class="line">    @<span class="keyword">import</span> <span class="string">"../SCSS/Article.scss"</span>;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Article.vue组件种在created生命周期时创建并发送了一个xhr的get请求，在获取成果后把response对象中的属性在赋值给data中相应的属性，vue会自动更新视图。</p>
+<p>博客所支持的markdown语法的关键所在也在这个组件里。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"post-content"</span>&gt;</div><div class="line">       &#123;&#123;&#123;content | marked&#125;&#125;&#125;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>通过引入markdown的filter使得输出的html直接被转换成html结构，还是很方便的。</p>
+<p><strong>关于后端</strong><br>后端是用node.js作为服务器的，使用了最流行Express框架。</p>
+<p>主体是由Express生成，本身十分精简。在实践中修改的地方主要是添加了各种前端发送的get和post请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">router.get(<span class="string">'/article'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> id = req.query.id</div><div class="line">    db.Article.findOne(&#123;<span class="attr">_id</span>: id&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err, doc</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (err) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (doc) &#123;</div><div class="line">            res.send(doc)</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>比如这个请求处理来自前端的get请求，通过mongoose来查询数据库并返回数据。</p>
+<p>前端页面通过promise控制异步操作，把得到的数据放入组件的data对象中，Vue侦测变化并更新视图。</p>
+<p>数据库的初始化文件放在了init.js中，第一次运行的时候会新建名为admin的用户，初始密码为111，可以在控制台的账号管理中修改。</p>
+<p>后记<br>其实还有很多很多没有在这篇文章提及的地方。毕竟这个博客框架相对是比较大的东西。</p>
+<p>写过这个博客管理器后，感受还是蛮多的，对Vue.js中的数据绑定，组件化和数据流了解的更深入了一层，同时也对Node.js的后端有了一次优雅的实践。</p>
+<p>所以，学过东西之后，实践是非常有必要的。前端很多时候就是不断踩坑的过程。一路踩坑再爬坑，获益匪浅。。。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
+<article id="post-怎么在页面里引入bootstrap的css和js文件呢？" class="article article-type-post" itemscope itemprop="blogPost">
+
+   
+    
+  
+  <div class="article-inner block-select">
+  
+    
+    
+      <header class="article-header">
+        
+           
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/怎么在页面里引入bootstrap的css和js文件呢？/">怎么在页面里引入bootstrap的css和js文件呢？</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>怎么在页面里引入bootstrap的css和js文件呢？<br><img src="http://img.blog.csdn.net/20161128111810694" alt="这里写图片描述"><br>这是一个nodejs+express工程 在npm install之后或使用npm install bootstrap命令安装bootstrap之后，怎么在views/index.ejs文件中引入bootstrap.css文件呢？</p>
+<p>在app.js里面引入这句</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="string">"/lib"</span>,express.<span class="keyword">static</span>(path.<span class="keyword">join</span>(__dirname, <span class="string">'node_modules'</span>)));</div></pre></td></tr></table></figure>
+<p>制定程序的lib库文件目录<br>然后在ejs里的路径里直接写<code>/lib/bootstrap/dist/js/bootstrap.min.js</code>等，你的node_modules文件夹中的bootstrap包里面的文件就会被映射，因为 这个__dirname 已经是获取当前模块文件所在目录的完整绝对路径。</p>
+
+      
+      
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+  
+    
 <article id="post-web开发时自动刷新网页：liveReload安装，sublime 3" class="article article-type-post" itemscope itemprop="blogPost">
 
    
@@ -281,97 +559,6 @@
 
   
     
-<article id="post-mac下git需忽略的文件处理办法（mac）" class="article article-type-post" itemscope itemprop="blogPost">
-
-   
-    
-  
-  <div class="article-inner block-select">
-  
-    
-    
-      <header class="article-header">
-        
-           
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/mac下git需忽略的文件处理办法（mac）/">如何在Mac OS X中开启或关闭显示隐藏文件命令</a>
-    </h1>
-  
-
-        
-      </header>
-      
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://img.blog.csdn.net/20161027012623070" alt="jojo&#39;s blog"></p>
-<p>在.git同级目录下新建.gitignore文件，将要忽略的文件写进去即可。</p>
-<p>忽略前后：</p>
-<p><img src="http://img.blog.csdn.net/20161027013007980" alt="jojo&#39;s blog"></p>
-
-      
-      
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    
-<article id="post-hexo d后 ERROR Deployer not found- git" class="article article-type-post" itemscope itemprop="blogPost">
-
-   
-    
-  
-  <div class="article-inner block-select">
-  
-    
-    
-      <header class="article-header">
-        
-           
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/hexo d后 ERROR Deployer not found- git/">hexo d后 ERROR Deployer not found git</a>
-    </h1>
-  
-
-        
-      </header>
-      
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>$ hexo d<br>ERROR Deployer not found: git</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save </p>
-</blockquote>
-<p>即可。</p>
-
-      
-      
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    
 <article id="post-hexo+github（windows版+http版），搭建Hexo博客并部署到Github" class="article article-type-post" itemscope itemprop="blogPost">
 
    
@@ -458,107 +645,6 @@
 <p>hexo n == hexo new</p>
 </blockquote>
 <p><strong>更多文章：</strong><br><a href="http://blog.csdn.net/weixin_36401046/article/details/52937108" target="_blank" rel="external">hexo+github（windows版+ssh版），搭建Hexo博客并部署到Github</a></p>
-
-      
-      
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    
-<article id="post-Express 应用生成器express-generator" class="article article-type-post" itemscope itemprop="blogPost">
-
-   
-    
-  
-  <div class="article-inner block-select">
-  
-    
-    
-      <header class="article-header">
-        
-           
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/Express 应用生成器express-generator/">Express 应用生成器express-generator</a>
-    </h1>
-  
-
-        
-      </header>
-      
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Express 应用生成器</p>
-<p>通过应用生成器工具 express 可以快速创建一个应用的骨架。</p>
-<p>通过如下命令安装：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> express-generator -g</div></pre></td></tr></table></figure>
-<p>-h 选项可以列出所有可用的命令行选项：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ express -h</div><div class="line"></div><div class="line">  Usage: express [<span class="keyword">options</span>] [dir]</div><div class="line"></div><div class="line">  Option<span class="variable">s:</span></div><div class="line"></div><div class="line">    -h, --<span class="keyword">help</span>          output usage information</div><div class="line">    -V, --<span class="keyword">version</span>       output the <span class="keyword">version</span> <span class="keyword">number</span></div><div class="line">    -<span class="keyword">e</span>, --ejs           <span class="built_in">add</span> ejs engine support (defaults <span class="keyword">to</span> jade)</div><div class="line">        --hbs           <span class="built_in">add</span> handlebars engine support</div><div class="line">    -H, --hogan         <span class="built_in">add</span> hogan.js engine support</div><div class="line">    -<span class="keyword">c</span>, --css <span class="symbol">&lt;engine&gt;</span>  <span class="built_in">add</span> stylesheet <span class="symbol">&lt;engine&gt;</span> support (less|stylus|compass|sass) (defaults <span class="keyword">to</span> plain css)</div><div class="line">        --git           <span class="built_in">add</span> .gitignore</div><div class="line">    -<span class="keyword">f</span>, --force         force <span class="keyword">on</span> non-<span class="built_in">empty</span> directory</div></pre></td></tr></table></figure>
-<p>例如，下面的示例就是在当前工作目录下创建一个命名为 myapp 的应用。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$ express myapp</div><div class="line"></div><div class="line">   <span class="string">create :</span> myapp</div><div class="line">   <span class="string">create :</span> myapp/<span class="keyword">package</span>.json</div><div class="line">   <span class="string">create :</span> myapp/app.js</div><div class="line">   <span class="string">create :</span> myapp/<span class="keyword">public</span></div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>javascripts</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>images</div><div class="line">   <span class="string">create :</span> myapp/routes</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/routes/</span>index.js</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/routes/</span>users.js</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>stylesheets</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/public/</span>stylesheets/style.css</div><div class="line">   <span class="string">create :</span> myapp/views</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>index.jade</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>layout.jade</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/views/</span>error.jade</div><div class="line">   <span class="string">create :</span> myapp/bin</div><div class="line">   <span class="string">create :</span> myapp<span class="regexp">/bin/</span>www</div></pre></td></tr></table></figure>
-<p>然后安装所有依赖包：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>cd myapp </div><div class="line"><span class="variable">$ </span>npm install</div></pre></td></tr></table></figure>
-<p>启动这个应用（MacOS 或 Linux 平台）：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ DEBUG=myapp <span class="built_in">npm</span> start</div></pre></td></tr></table></figure>
-<p>Windows 平台使用如下命令：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="built_in">set</span> DEBUG=myapp &amp; npm <span class="built_in">start</span></div></pre></td></tr></table></figure>
-<p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了。i</p>
-<p>通过 Express 应用生成器创建的应用一般都有如下目录结构：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── app<span class="selector-class">.js</span></div><div class="line">├── bin</div><div class="line">│   └── www</div><div class="line">├── package<span class="selector-class">.json</span></div><div class="line">├── public</div><div class="line">│   ├── images</div><div class="line">│   ├── javascripts</div><div class="line">│   └── stylesheets</div><div class="line">│       └── style<span class="selector-class">.css</span></div><div class="line">├── routes</div><div class="line">│   ├── index<span class="selector-class">.js</span></div><div class="line">│   └── users<span class="selector-class">.js</span></div><div class="line">└── views</div><div class="line">    ├── error<span class="selector-class">.jade</span></div><div class="line">    ├── index<span class="selector-class">.jade</span></div><div class="line">    └── layout.jade</div></pre></td></tr></table></figure>
-<p>7 directories, 9 files</p>
-
-      
-      
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    
-<article id="post-git手册" class="article article-type-post" itemscope itemprop="blogPost">
-
-   
-    
-  
-  <div class="article-inner block-select">
-  
-    
-    
-      <header class="article-header">
-        
-           
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/27/git手册/">git手册</a>
-    </h1>
-  
-
-        
-      </header>
-      
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>git init                                                  # 初始化本地git仓库（创建新仓库）<br>git config –global user.name “xxx”                       # 配置用户名<br>git config –global user.email “xxx@xxx.com”              # 配置邮件<br>git config –global color.ui true                         # git status等命令自动着色<br>git config –global color.status auto<br>git config –global color.diff auto<br>git config –global color.branch auto<br>git config –global color.interactive auto<br>git config –list 配置列表<br>git clone git+ssh://git@192.168.53.168/VT.git             # clone远程仓库<br>git status                                                # 查看当前版本状态（是否修改）<br>git add xyz                                               # 添加xyz文件至index<br>git add .                                                 # 增加当前子目录下所有更改过的文件至index<br>git commit -m ‘xxx’                                       # 提交<br>git commit –amend -m ‘xxx’                               # 合并上一次提交（用于反复修改）<br>git commit -am ‘xxx’                                      # 将add和commit合为一步<br>git rm xxx                                                # 删除index中的文件<br>git rm -r *                                               # 递归删除<br>git log                                                   # 显示提交日志<br>git log -1                                                # 显示1行日志 -n为n行<br>git log -5<br>git log –stat                                            # 显示提交日志及相关变动文件<br>git log -p -m<br>git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容<br>git show dfb02                                            # 可只用commitid的前几位<br>git show HEAD                                             # 显示HEAD提交日志<br>git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本<br>git tag                                                   # 显示已存在的tag<br>git tag -a v2.0 -m ‘xxx’                                  # 增加v2.0的tag<br>git show v2.0                                             # 显示v2.0的日志及详细内容<br>git log v2.0                                              # 显示v2.0的日志<br>git diff                                                  # 显示所有未添加至index的变更<br>git diff –cached                                         # 显示所有已添加index但还未commit的变更<br>git diff HEAD^                                            # 比较与上一个版本的差异<br>git diff HEAD – ./lib                                    # 比较与HEAD版本lib目录的差异<br>git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的<br>git diff origin/master..master –stat                     # 只显示差异的文件，不显示具体内容<br>git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）<br>git branch                                                # 显示本地分支<br>git branch –contains 50089                               # 显示包含提交50089的分支<br>git branch -a                                             # 显示所有分支<br>git branch -r                                             # 显示所有原创分支<br>git branch –merged                                       # 显示所有已合并到当前分支的分支<br>git branch –no-merged                                    # 显示所有未合并到当前分支的分支<br>git branch -m master master_copy                          # 本地分支改名<br>git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出<br>git checkout -b master master_copy                        # 上面的完整版<br>git checkout features/performance                         # 检出已存在的features/performance分支<br>git checkout –track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支<br>git checkout v2.0                                         # 检出版本v2.0<br>git checkout -b devel origin/develop                      # 从远程分支develop创建新本地分支devel并检出<br>git checkout – README                                    # 检出head版本的README文件（可用于修改错误回退）<br>git merge origin/master                                   # 合并远程master分支至当前分支<br>git cherry-pick ff44785404a8e                             # 合并提交ff44785404a8e的修改<br>git push origin master                                    # 将当前分支push到远程master分支<br>git push origin :hotfixes/BJVEP933                        # 删除远程仓库的hotfixes/BJVEP933分支<br>git push –tags                                           # 把所有tag推送到远程仓库<br>git fetch                                                 # 获取所有远程分支（不更新本地分支，另需merge）<br>git fetch –prune                                         # 获取所有原创分支并清除服务器上已删掉的分支<br>git pull origin master                                    # 获取远程分支master并merge到当前分支<br>git mv README README2                                     # 重命名文件README为README2<br>git reset –hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退）<br>git rebase<br>git branch -d hotfixes/BJVEP933                           # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）<br>git branch -D hotfixes/BJVEP933                           # 强制删除分支hotfixes/BJVEP933<br>git ls-files                                              # 列出git index包含的文件<br>git show-branch                                           # 图示当前分支历史<br>git show-branch –all                                     # 图示所有分支历史<br>git whatchanged                                           # 显示提交历史对应的文件修改<br>git revert dfb02e6e4f2f7b573337763e5c0013802e392818       # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818<br>git ls-tree HEAD                                          # 内部命令：显示某个git对象<br>git rev-parse v2.0                                        # 内部命令：显示某个ref对于的SHA1 HASH<br>git reflog                                                # 显示所有提交，包括孤立节点<br>git show HEAD@{5}<br>git show master@{yesterday}                               # 显示master分支昨天的状态<br>git log –pretty=format:’%h %s’ –graph                   # 图示提交日志<br>git show HEAD~3<br>git show -s –pretty=raw 2be7fcb476<br>git stash                                                 # 暂存当前修改，将所有至为HEAD状态<br>git stash list                                            # 查看所有暂存<br>git stash show -p stash@{0}                               # 参考第一次暂存<br>git stash apply stash@{0}                                 # 应用第一次暂存<br>git grep “delete from”                                    # 文件中搜索文本“delete from”<br>git grep -e ‘#define’ –and -e SORT_DIRENT<br>git gc<br>git fsck</p>
 
       
       
